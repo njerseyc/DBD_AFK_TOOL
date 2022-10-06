@@ -5,4 +5,6 @@
 
 ## 请下载***Releases***中的文件。  
 
-有任何问题请在[Github Issues](https://github.com/maskrs/DBD_AFK_TOOL/issues)中留言
+有任何问题请在[Github Issues](https://github.com/maskrs/DBD_AFK_TOOL/issues)中留言  
+
+###   推荐[黎明杀机自动点血网工具](https://github.com/WKhistory/DBDAuto_BPWeb)，需要的自提，有任何问题请联系原作者。 
