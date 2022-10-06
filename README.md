@@ -3,7 +3,7 @@
 
 启动EXE程序，点击运行或F9启动脚本。  
 
-## 请下载***Releases***中的文件。  
+## 请下载[Releases](https://github.com/maskrs/DBD_AFK_TOOL/releases)中的文件。  
 
 有任何问题请在[Github Issues](https://github.com/maskrs/DBD_AFK_TOOL/issues)中留言  
 
