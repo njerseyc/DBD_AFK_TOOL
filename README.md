@@ -17,7 +17,7 @@
 ## 基本设置
 ★&ensp;使用本脚本请 *关闭滤镜* ！  
 
-★&ensp;使用本脚本请使用 *原始UI* ！  
+★&ensp;使用本脚本请使用 *原始 UI* ！  
 
 ★&ensp;以下两个选项务必为 ***100%*** ！  
 
@@ -46,7 +46,7 @@
 
 &ensp;&ensp;&ensp;●&ensp;选择 *单独角色挂机* 模式，请选择 *要挂机的角色* 后再运行脚本！【人类挂机只推荐此模式；屠夫推荐使用】
 ## 行为模式
-`挂机要先搞清楚目的。挂机应以裂隙、裂片为主，不以血点为目的。`  
+&emsp;`挂机要先搞清楚目的。挂机应以裂隙、裂片为主，不以血点为目的。`  
 
 - 随机模式：以随机移动闪避人类道具，最大程度规避左键，以技能为主，逼迫人类尽快出门，从而提高效率。配合怨气冲天和光明之眼可使得对局效率大大提升。【全屠夫技能适配】  
 
@@ -77,4 +77,4 @@
 
 &emsp;<img src="https://github.com/maskrs/DBD_AFK_TOOL/blob/main/image-foder/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE.png" width="500px">
 
- ###   推荐[黎明杀机自动点血网工具](https://github.com/WKhistory/DBDAuto_BPWeb/releases)，需要的自提，有任何问题请联系原作者。 
+>###   推荐[黎明杀机自动点血网工具](https://github.com/WKhistory/DBDAuto_BPWeb/releases)，需要的自提，有任何问题请联系原作者。 
