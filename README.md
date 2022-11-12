@@ -75,6 +75,6 @@
 
 - 对于启动脚本无反应的情况，请检查系统设置  
 
-&emsp;<img src="https://github.com/maskrs/DBD_AFK_TOOL/blob/main/image-foder/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE.png" width="500px">
+&emsp;<img src="https://github.com/maskrs/DBD_AFK_TOOL/blob/main/image-foder/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE.png" width="570px">
 
 >###   推荐[黎明杀机自动点血网工具](https://github.com/WKhistory/DBDAuto_BPWeb/releases)，需要的自提，有任何问题请联系原作者。 
