@@ -40,7 +40,7 @@
 
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;○&ensp;选择单独行角色模式，选择 *该行* 的 **第一个角色** 再运行脚本！【推荐屠夫使用】
 
-&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/maskrs/DBD_AFK_TOOL/blob/main/image-foder/%E8%AF%B4%E6%98%8E1.png" width="570px">
+&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/maskrs/DBD_AFK_TOOL/blob/main/image-foder/%E8%AF%B4%E6%98%8E1.png" width="600px">
 
 ★&ensp;单独角色挂机模式：若选择此模式，将单独运行特定角色  
 
