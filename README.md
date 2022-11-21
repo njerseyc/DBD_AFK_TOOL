@@ -1,5 +1,6 @@
 # 黎明杀机挂机工具【DBD_AFK_TOOL】
->## 请下载[Releases](https://github.com/maskrs/DBD_AFK_TOOL/releases)中的文件。有任何问题请在[Github Issues](https://github.com/maskrs/DBD_AFK_TOOL/issues)中留言，或者在[讨论区](https://github.com/maskrs/DBD_AFK_TOOL/discussions)讨论交流  
+>## 请下载[Releases](https://github.com/maskrs/DBD_AFK_TOOL/releases)中的文件。有任何问题请在[Github Issues](https://github.com/maskrs/DBD_AFK_TOOL/issues)中留言，或者在[讨论区](https://github.com/maskrs/DBD_AFK_TOOL/discussions)讨论交流。  
+>###   血点防溢出插件移植于[黎明杀机自动点血网工具]的部分功能(https://github.com/WKhistory/DBDAuto_BPWeb/releases)，有深度使用需求的自取。 
 ```
 1.脚本实现对局全自动循环；
 
@@ -76,5 +77,3 @@
 - 对于启动脚本无反应的情况，请检查系统设置  
 
 &emsp;<img src="https://github.com/maskrs/DBD_AFK_TOOL/blob/main/image-foder/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE.png" width="570px">
-
->###   推荐[黎明杀机自动点血网工具](https://github.com/WKhistory/DBDAuto_BPWeb/releases)，有需要的自提。 
