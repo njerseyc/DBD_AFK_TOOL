@@ -73,4 +73,4 @@
 &emsp;<img src="https://github.com/maskrs/DBD_AFK_TOOL/blob/main/image-foder/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE.png" width="570px">  
   
 ## 捐献【如果你觉得好用请支持一下吧~】
-<img src="https://github.com/maskrs/simi/blob/main/image/%E5%BE%AE%E4%BF%A1.png" width="300px">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/maskrs/simi/blob/main/image/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg" width="200px">
+<img src="https://github.com/maskrs/simi/blob/main/image/%E5%BE%AE%E4%BF%A1.png" width="200px">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/maskrs/simi/blob/main/image/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg" width="200px">
