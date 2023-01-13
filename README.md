@@ -1,5 +1,6 @@
 # &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;黎明杀机挂机工具【DBD_AFK_TOOL】
->## 请下载[Releases](https://github.com/maskrs/DBD_AFK_TOOL/releases)中的文件。有任何问题请在[Github Issues](https://github.com/maskrs/DBD_AFK_TOOL/issues)中留言，或者在[讨论区](https://github.com/maskrs/DBD_AFK_TOOL/discussions)讨论交流。  
+>## 请下载[Releases](https://github.com/maskrs/DBD_AFK_TOOL/releases)中的文件。  
+>## 有任何问题请在[Github Issues](https://github.com/maskrs/DBD_AFK_TOOL/issues)中留言，或者在[讨论区](https://github.com/maskrs/DBD_AFK_TOOL/discussions)交流。  
 |工具功能|
 |  :----        |
 |1.工具实现对局全自动循环|
