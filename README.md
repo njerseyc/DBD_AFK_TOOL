@@ -29,7 +29,7 @@
 
 &emsp;<img src="https://github.com/maskrs/DBD_AFK_TOOL/blob/main/image-foder/%E5%A4%A7%E5%8E%85%E5%90%AF%E5%8A%A8.png" width="600px">
 
-## 挂机模式
+## 选择角色
 
 &ensp;●&ensp;第一次使用此模式时，确保你在角色大厅，然后点击`“检索”`。软件会遍历你的屠夫角色，遍历完成之后会提示检索成功。  
 
@@ -43,7 +43,7 @@
 
 &ensp;●&ensp;至少选择一个角色。
 
-## 行为模式
+## 选择行为
 
 - 血 点：不移动，不闪避，以左键攻击为主，特殊能力和技能为辅。  
 
