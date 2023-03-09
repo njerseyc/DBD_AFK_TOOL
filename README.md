@@ -57,3 +57,5 @@
   
 # 赞助【如果你觉得好用请支持一下吧~】
 &ensp;&ensp;&ensp;&ensp;<img src="https://github.com/maskrs/simi/blob/main/image/%E5%BE%AE%E4%BF%A1.png" width="200px">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://github.com/maskrs/simi/blob/main/image/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg" width="200px">
+
+### 推荐：  [黎明杀机自动血网工具](https://github.com/WKhistory/DBDAuto_BPWeb)  
