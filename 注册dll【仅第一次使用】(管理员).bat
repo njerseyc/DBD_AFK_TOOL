@@ -1,1 +1,0 @@
-regsvr32 /s %~dp0\lw9_09.dll
