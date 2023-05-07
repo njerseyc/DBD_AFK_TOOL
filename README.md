@@ -47,7 +47,7 @@
 
 &ensp;●&ensp;至少选择一个角色。  
   
-&ensp;●&ensp;检索相关问题：[参考这里](https://github.com/maskrs/DBD_AFK_TOOL/discussions/16)
+&ensp;●&ensp;检索相关问题：[参考这里](https://github.com/maskrs/DBD_AFK_TOOL/wiki/%E6%A3%80%E7%B4%A2%E6%9C%AA%E5%AE%8C%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95#%E6%A3%80%E7%B4%A2%E6%9C%AA%E5%AE%8C%E6%88%90%E6%8F%90%E7%A4%BA%E9%94%99%E8%AF%AF%E6%88%96%E4%B9%B1%E7%A0%81)
 
 ## 行为选择
 
