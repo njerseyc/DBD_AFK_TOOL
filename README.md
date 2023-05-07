@@ -61,3 +61,4 @@
   
 
 ### 推荐：  [黎明杀机自动血网工具](https://github.com/WKhistory/DBDAuto_BPWeb)  
+### 检索相关问题：[参考这里](https://github.com/maskrs/DBD_AFK_TOOL/discussions/16)
