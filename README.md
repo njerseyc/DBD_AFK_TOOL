@@ -45,7 +45,9 @@
 
 &ensp;●&ensp;点击`“确定”`，可以保存你当前的选项。  
 
-&ensp;●&ensp;至少选择一个角色。
+&ensp;●&ensp;至少选择一个角色。  
+  
+&ensp;●&ensp;检索相关问题：[参考这里](https://github.com/maskrs/DBD_AFK_TOOL/discussions/16)
 
 ## 行为选择
 
@@ -61,4 +63,3 @@
   
 
 ### 推荐：  [黎明杀机自动血网工具](https://github.com/WKhistory/DBDAuto_BPWeb)  
-### 检索相关问题：[参考这里](https://github.com/maskrs/DBD_AFK_TOOL/discussions/16)
