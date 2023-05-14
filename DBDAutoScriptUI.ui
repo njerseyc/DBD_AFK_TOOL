@@ -397,7 +397,7 @@ QPushButton:hover {
        </rect>
       </property>
       <property name="text">
-       <string>ver 5.0.3</string>
+       <string>ver 5.0.5</string>
       </property>
      </widget>
     </widget>
