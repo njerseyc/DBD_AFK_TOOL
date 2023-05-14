@@ -7,6 +7,7 @@ import webbrowser
 import pyautogui as py
 import requests, re
 import win32gui
+import win32api
 from keyboard_operation import key_down, key_up
 from operator import lt, eq, gt, ge, ne, floordiv, mod
 from pynput import keyboard
@@ -212,7 +213,7 @@ class CustomSelectKiller:
 
 
     def killer_name_ocr(self):
-        killername = Coord(408, 61, 629, 99)
+        killername = Coord(404, 61, 637, 97)
         killername.processed_coord()
         killername.area_check()
         self.killer_name = lw.Ocr(killername.x1_coor, killername.y1_coor, killername.x2_coor, killername.y2_coor, "#95", 0.75)
@@ -599,7 +600,7 @@ def authorization():
 
 def update():
     '''check the update'''
-    ver_now = 'V5.0.4'
+    ver_now = 'V5.0.5'
     html_str = requests.get('https://gitee.com/kioley/DBD_AFK_TOOL').content.decode()
     ver_new = re.search('title>(.*?)<', html_str, re.S).group(1)[13:19]
     if ne(ver_now, ver_new):
@@ -665,7 +666,7 @@ def blood_and_ceasma():
     Blood_and_CeasmaXY.processed_coord()
     Blood_and_CeasmaXY.area_check()
     ret1, ret2 = Blood_and_CeasmaXY.find_color("C20408-000000", 0.94)
-    ret3, ret4 = Blood_and_CeasmaXY.find_color("3A1752-000000")
+    ret3, ret4 = Blood_and_CeasmaXY.find_color("3A1752-000000", 0.95)
     if gt(ret1, 0) and gt(ret2, 0) and gt(ret3, 0) and gt(ret4, 0):
         return True
     else:
@@ -1255,6 +1256,11 @@ def AFK():
     if hwnd == 0:
         win32api.MessageBox(hwnd, "未检测到游戏。", "错误", win32con.MB_OK | win32con.MB_ICONERROR)
         sys.exit(0)
+
+    if not settings.value("CPCI/rb_survivor") and not settings.value("CPCI/rb_killer"):
+        win32api.MessageBox(hwnd, "请选择阵营。", "提示", win32con.MB_OK | win32con.MB_ICONASTERISK)
+        sys.exit(0)
+
     if not custom_select.select_killer_lst and eq(settings.value("CPCI/rb_killer"), True):
         win32api.MessageBox(hwnd, "至少选择一个屠夫。", "提示", win32con.MB_OK | win32con.MB_ICONASTERISK)
         sys.exit(0)
