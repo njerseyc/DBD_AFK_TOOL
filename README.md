@@ -61,6 +61,5 @@
 - 快捷关闭`ALT + END`，使用此快捷键会直接关闭程序。  
 
 ## [常见问题解答与故障排除](https://github.com/maskrs/DBD_AFK_TOOL/wiki)
-  
 
 ### 推荐：  [黎明杀机自动血网工具](https://github.com/WKhistory/DBDAuto_BPWeb)  
