@@ -170,4 +170,4 @@ class Ui_MainWindow(object):
         self.cb_killer_do.setText(_translate("MainWindow", "屠夫赛后自动留言"))
         self.pb_start.setText(_translate("MainWindow", "开始"))
         self.pb_stop.setText(_translate("MainWindow", "停止"))
-        self.lb_version.setText(_translate("MainWindow", "ver 5.0.5"))
+        self.lb_version.setText(_translate("MainWindow", "ver 5.0.6"))

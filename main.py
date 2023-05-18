@@ -201,6 +201,7 @@ class CustomSelectKiller:
         self.own_number = 0
         self.select_killer_lst = []
         self.match_select_killer_lst = []
+        # 随版本更改
         self.all_killer_name = ["设陷者", "幽灵", "农场主", "护士", "女猎手", "迈克尔迈尔斯", "妖巫", "医生",
                                 "食人魔", "梦魇", "门徒", "小丑", "怨灵", "军团", "瘟疫", "鬼面", "魔王", "鬼武士",
                                 "死亡枪手", "处刑者", "枯萎者", "连体婴", "骗术师", "NEMESIS", "地狱修士", "艺术家",
@@ -219,7 +220,7 @@ class CustomSelectKiller:
         self.killer_name = lw.Ocr(killername.x1_coor, killername.y1_coor, killername.x2_coor, killername.y2_coor, "#95", 0.75)
         if self.killer_name in self.all_killer_name:
             self.write_killer_name()
-            if self.killer_name == "白骨商人": # 随版本更改
+            if self.killer_name == "白骨商人":  # 随版本更改
                 self.ocr_error = 1
                 back_first()
                 moveclick(387, 300, 1, 1)
@@ -232,21 +233,43 @@ class CustomSelectKiller:
                 MessageBox(0, "角色检索已完成", "提醒", win32con.MB_ICONASTERISK)
                 with open(SEARCH_PATH, "w", encoding='UTF-8') as search_file:
                     search_file.write("\n".join(self.killer_name_array))
-
+                self.killer_name_array.clear()
         else:
-            back_first()
-            moveclick(387, 300, 1, 1)
-            moveclick(141, 109, 1, 1)  # 关闭角色按钮
-            id = win32gui.FindWindow(None, u"DBD_AFK_TOOL")
-            win32gui.SetWindowPos(id, win32con.HWND_TOPMOST, 0, 0, 0, 0,
-                                  win32con.SWP_NOSIZE | win32con.SWP_NOMOVE)
-            win32gui.SetWindowPos(id, win32con.HWND_NOTOPMOST, 0, 0, 0, 0,
-                                  win32con.SWP_NOSIZE | win32con.SWP_NOMOVE)
-            MessageBox(0, "检索未完成，请检查以下：\n" + str(self.killer_name_array) + "\n有错误或乱码请重新检索", "提醒", win32con.MB_ICONASTERISK)
-            with open(SEARCH_PATH, "w") as search_file:
-                search_file.write("\n".join(self.killer_name_array))
-            self.ocr_error = 1
-            self.killer_name_array.clear()
+            killername = Coord(273, 51, 325, 85)
+            killername.processed_coord()
+            killername.area_check()
+            self.ocr_notown = lw.Ocr(killername.x1_coor, killername.y1_coor, killername.x2_coor, killername. y2_coor, "#95", 0.75)
+            if self.ocr_notown == "角色":
+                self.ocr_error = 1
+                py.keyDown('esc')
+                py.keyUp('esc')
+                time.sleep(1)
+                py.keyDown('esc')
+                py.keyUp('esc')
+                id = win32gui.FindWindow(None, u"DBD_AFK_TOOL")
+                win32gui.SetWindowPos(id, win32con.HWND_TOPMOST, 0, 0, 0, 0,
+                                      win32con.SWP_NOSIZE | win32con.SWP_NOMOVE)
+                win32gui.SetWindowPos(id, win32con.HWND_NOTOPMOST, 0, 0, 0, 0,
+                                      win32con.SWP_NOSIZE | win32con.SWP_NOMOVE)
+                MessageBox(0, "角色检索已完成", "提醒", win32con.MB_ICONASTERISK)
+                with open(SEARCH_PATH, "w", encoding='UTF-8') as search_file:
+                    search_file.write("\n".join(self.killer_name_array))
+                self.killer_name_array.clear()
+            else:
+                back_first()
+                moveclick(387, 300, 1, 1)
+                moveclick(141, 109, 1, 1)  # 关闭角色按钮
+                id = win32gui.FindWindow(None, u"DBD_AFK_TOOL")
+                win32gui.SetWindowPos(id, win32con.HWND_TOPMOST, 0, 0, 0, 0,
+                                      win32con.SWP_NOSIZE | win32con.SWP_NOMOVE)
+                win32gui.SetWindowPos(id, win32con.HWND_NOTOPMOST, 0, 0, 0, 0,
+                                      win32con.SWP_NOSIZE | win32con.SWP_NOMOVE)
+                MessageBox(0, "检索未完成，请检查以下：\n" + str(self.killer_name_array) + "\n有错误或乱码请重新检索", "提醒", win32con.MB_ICONASTERISK)
+                with open(SEARCH_PATH, "w") as search_file:
+                    search_file.write("\n".join(self.killer_name_array))
+                self.ocr_error = 1
+                self.killer_name_array.clear()
+
     def write_killer_name(self):
         self.killer_name_array.append(self.killer_name)
 
@@ -344,6 +367,7 @@ class CustomSelectKiller:
                 n += 1
 
     def select_killer_name(self):
+        # 随版本更改
         if settings.value("CUSSEC/cb_jiage"):
             self.select_killer_lst.append("设陷者")
         if settings.value("CUSSEC/cb_dingdang"):
@@ -600,7 +624,7 @@ def authorization():
 
 def update():
     '''check the update'''
-    ver_now = 'V5.0.5'
+    ver_now = 'V5.0.6'
     html_str = requests.get('https://gitee.com/kioley/DBD_AFK_TOOL').content.decode()
     ver_new = re.search('title>(.*?)<', html_str, re.S).group(1)[13:19]
     if ne(ver_now, ver_new):
@@ -662,11 +686,11 @@ def listen_key(pid):
 def blood_and_ceasma():
     '''check the blood and ceasma in the hall
     :return: bool'''
-    Blood_and_CeasmaXY = Coord(1191, 56, 1607, 96)
+    Blood_and_CeasmaXY = Coord(1091, 53, 1628, 93)
     Blood_and_CeasmaXY.processed_coord()
     Blood_and_CeasmaXY.area_check()
     ret1, ret2 = Blood_and_CeasmaXY.find_color("C20408-000000", 0.94)
-    ret3, ret4 = Blood_and_CeasmaXY.find_color("3A1752-000000", 0.95)
+    ret3, ret4 = Blood_and_CeasmaXY.find_color("8378B2-000000", 0.94) # 3A1752
     if gt(ret1, 0) and gt(ret2, 0) and gt(ret3, 0) and gt(ret4, 0):
         return True
     else:
