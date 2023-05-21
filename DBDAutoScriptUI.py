@@ -150,6 +150,12 @@ class Ui_MainWindow(object):
         self.rb_killer.clicked['bool'].connect(self.rb_no_action.setEnabled)
         self.rb_killer.clicked['bool'].connect(self.pb_research.setEnabled)
         self.rb_killer.clicked['bool'].connect(self.pb_select_cfg.setEnabled)
+        self.rb_no_action.clicked['bool'].connect(self.pb_research.setDisabled)
+        self.rb_no_action.clicked['bool'].connect(self.pb_select_cfg.setDisabled)
+        self.rb_fixed_mode.clicked['bool'].connect(self.pb_research.setEnabled)
+        self.rb_fixed_mode.clicked['bool'].connect(self.pb_select_cfg.setEnabled)
+        self.rb_random_mode.clicked['bool'].connect(self.pb_research.setEnabled)
+        self.rb_random_mode.clicked['bool'].connect(self.pb_select_cfg.setEnabled)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -170,4 +176,4 @@ class Ui_MainWindow(object):
         self.cb_killer_do.setText(_translate("MainWindow", "屠夫赛后自动留言"))
         self.pb_start.setText(_translate("MainWindow", "开始"))
         self.pb_stop.setText(_translate("MainWindow", "停止"))
-        self.lb_version.setText(_translate("MainWindow", "ver 5.0.6"))
+        self.lb_version.setText(_translate("MainWindow", "ver 5.0.7"))

@@ -397,7 +397,7 @@ QPushButton:hover {
        </rect>
       </property>
       <property name="text">
-       <string>ver 5.0.6</string>
+       <string>ver 5.0.7</string>
       </property>
      </widget>
     </widget>
@@ -632,6 +632,102 @@ QPushButton:hover {
     <hint type="destinationlabel">
      <x>211</x>
      <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_no_action</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pb_research</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>242</x>
+     <y>128</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>204</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_no_action</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pb_select_cfg</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>243</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_fixed_mode</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pb_research</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_fixed_mode</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pb_select_cfg</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>211</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_random_mode</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pb_research</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>128</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>116</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rb_random_mode</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pb_select_cfg</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>180</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>204</y>
     </hint>
    </hints>
   </connection>

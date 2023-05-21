@@ -27,8 +27,8 @@ def begin():
     save_cfg()
     # begin = multiprocessing.Process(target=AFK)
     # begin.daemon = True
-    begin = threading.Thread(target=AFK, daemon=True)
-    begin.start()
+    begingame.start()
+
 
 
 
@@ -214,7 +214,7 @@ class CustomSelectKiller:
 
 
     def killer_name_ocr(self):
-        killername = Coord(404, 61, 637, 97)
+        killername = Coord(284, 31, 688, 146)
         killername.processed_coord()
         killername.area_check()
         self.killer_name = lw.Ocr(killername.x1_coor, killername.y1_coor, killername.x2_coor, killername.y2_coor, "#95", 0.75)
@@ -235,7 +235,7 @@ class CustomSelectKiller:
                     search_file.write("\n".join(self.killer_name_array))
                 self.killer_name_array.clear()
         else:
-            killername = Coord(273, 51, 325, 85)
+            killername = Coord(172, 1, 435, 141)
             killername.processed_coord()
             killername.area_check()
             self.ocr_notown = lw.Ocr(killername.x1_coor, killername.y1_coor, killername.x2_coor, killername. y2_coor, "#95", 0.75)
@@ -596,6 +596,10 @@ def read_cfg():
         dbd_window.main_ui.pb_select_cfg.setDisabled(True)
     if settings.value("CPCI/rb_killer") == "true":
         dbd_window.main_ui.cb_killer_do.setEnabled(True)
+    if settings.value("CPCI/rb_no_action") == "true":
+        dbd_window.main_ui.pb_research.setDisabled(True)
+        dbd_window.main_ui.pb_select_cfg.setDisabled(True)
+
 
 
 
@@ -624,7 +628,7 @@ def authorization():
 
 def update():
     '''check the update'''
-    ver_now = 'V5.0.6'
+    ver_now = 'V5.0.7'
     html_str = requests.get('https://gitee.com/kioley/DBD_AFK_TOOL').content.decode()
     ver_new = re.search('title>(.*?)<', html_str, re.S).group(1)[13:19]
     if ne(ver_now, ver_new):
@@ -650,6 +654,17 @@ def hall_tip():
             time.sleep(30)
 
 
+def auto_space():
+    '''Child thread, auto press space'''
+    autospace = False
+    while eq(autospace, False):
+        key_down(hwnd, 'space')
+        # time.sleep(2)
+        key_up(hwnd, 'space')
+        if eq(blood_and_ceasma(), True):
+            autospace = True
+
+
 def listen_key(pid):
     '''Hotkey  setting, monitored keyboard input'''
 
@@ -659,6 +674,12 @@ def listen_key(pid):
     current = set()
     def execute():
         kill = psutil.Process(pid)
+        # begingame._stop_event = threading.Event()
+        def openexe():
+            os.startfile(os.path.join(BASE_DIR, "DBD_AFK_TOOL.V5.0.7.exe"))
+        open_exe = threading.Thread(target=openexe, daemon=True)
+        open_exe.start()
+        time.sleep(1.5)
         kill.kill()
     def pause():
         pause = psutil.Process(pid)
@@ -686,7 +707,7 @@ def listen_key(pid):
 def blood_and_ceasma():
     '''check the blood and ceasma in the hall
     :return: bool'''
-    Blood_and_CeasmaXY = Coord(1091, 53, 1628, 93)
+    Blood_and_CeasmaXY = Coord(1105, 0, 1715, 144) #1091, 53, 1628, 93
     Blood_and_CeasmaXY.processed_coord()
     Blood_and_CeasmaXY.area_check()
     ret1, ret2 = Blood_and_CeasmaXY.find_color("C20408-000000", 0.94)
@@ -1003,8 +1024,6 @@ def survivor_action():
         key_up(hwnd, 'e')
         key_up(hwnd, 'lshift')
         key_down(hwnd, 'lcontrol')
-    key_down(hwnd, 'space')
-    key_up(hwnd, 'space')
     key_up(hwnd, act_move)
     time.sleep(3)
     key_up(hwnd, 'lcontrol')
@@ -1107,8 +1126,7 @@ def killer_action():
         key_up(hwnd, act_move)
     # 结束
     time.sleep(1.5)
-    key_down(hwnd, 'space')
-    key_up(hwnd, 'space')
+
 
 
 
@@ -1285,7 +1303,7 @@ def AFK():
         win32api.MessageBox(hwnd, "请选择阵营。", "提示", win32con.MB_OK | win32con.MB_ICONASTERISK)
         sys.exit(0)
 
-    if not custom_select.select_killer_lst and eq(settings.value("CPCI/rb_killer"), True):
+    if not custom_select.select_killer_lst and eq(settings.value("CPCI/rb_killer"), True) and eq(settings.value("CPCI/rb_no_action"), False):
         win32api.MessageBox(hwnd, "至少选择一个屠夫。", "提示", win32con.MB_OK | win32con.MB_ICONASTERISK)
         sys.exit(0)
     # 检查输入数值是否超过最大角色数量
@@ -1303,6 +1321,7 @@ def AFK():
 
     # 创建子线程
     tip = threading.Thread(target=hall_tip, daemon=True)
+    autospace = threading.Thread(target=auto_space, daemon=True)
     while True:
         reconnection = False
 
@@ -1330,11 +1349,10 @@ def AFK():
                 #     character_rotation()
                 if eq(settings.value("CPCI/rb_killer"), True):
                     time.sleep(1)
-                    if gt(list_number, 1):
+                    if eq(settings.value("CPCI/rb_no_action"), True):
+                        list_number = 0
+                    if ge(list_number, 1):
                         character_selection()
-                    elif eq(list_number, 1):
-                        character_selection()
-                        list_number -= 1
                 elif eq(settings.value("CPCI/rb_survivor"), True):
                     time.sleep(1)
                     py.click()
@@ -1413,6 +1431,7 @@ def AFK():
         局内
         '''
         game = False
+        autospace.start()
         while game == False:
             if eq(blood_and_ceasma(), True):
                 time.sleep(2)
@@ -1585,6 +1604,7 @@ if __name__ == '__main__':
     main_pid = os.getpid()
     afk_pid = 0
     hotkey = threading.Thread(target=listen_key, args=(main_pid,), daemon=True)  #  args=(os.getpid(),)
+    begingame = threading.Thread(target=AFK, daemon=True)
     hotkey.start()
     authorization()
     if eq(settings.value("UPDATE/cb_autocheck"), 'true'):
