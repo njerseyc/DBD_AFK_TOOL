@@ -63,7 +63,7 @@
 ## 快捷键  
 
 - 快捷启动`ALT + HOME`  
-- 快捷关闭`ALT + END`，使用此快捷键会直接关闭程序。  
+- 快捷关闭`ALT + END`  
 
 ### [常见问题解答与故障排除](https://github.com/maskrs/DBD_AFK_TOOL/wiki)
 
